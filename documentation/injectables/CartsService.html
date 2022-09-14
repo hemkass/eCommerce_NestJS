@@ -1,0 +1,2207 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ecommerce documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ecommerce documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >CartsService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/carts/carts.service.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addOwnerCart" >addOwnerCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addProductToCart" >addProductToCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#calculateTotalCart" >calculateTotalCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkQuantityInCart" >checkQuantityInCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteErrorMessage" >deleteErrorMessage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteFromCart" >deleteFromCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteWholeCart" >deleteWholeCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getCart" >getCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#HandleLastDeliveryDate" >HandleLastDeliveryDate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#HandleQuantityShort" >HandleQuantityShort</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#isCart" >isCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#isProduct" >isProduct</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#isProductOnCart" >isProductOnCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#newCart" >newCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#QuantityInCartByProduct" >QuantityInCartByProduct</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#sendErrorMessageOnCart" >sendErrorMessageOnCart</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateTotalCart" >updateTotalCart</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(prisma: <a href="../injectables/PrismaService.html" target="_self">PrismaService</a>, productService: <a href="../injectables/ProductsService.html" target="_self">ProductsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/carts/carts.service.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>prisma</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PrismaService.html" target="_self" >PrismaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>productService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProductsService.html" target="_self" >ProductsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addOwnerCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>addOwnerCart</b></span>
+                        <a href="#addOwnerCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addOwnerCart(user, cartId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="582"
+                            class="link-to-prism">src/carts/carts.service.ts:582</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>cartId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addProductToCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>addProductToCart</b></span>
+                        <a href="#addProductToCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addProductToCart(addProductData)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="364"
+                            class="link-to-prism">src/carts/carts.service.ts:364</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>addProductData</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateTotalCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>calculateTotalCart</b></span>
+                        <a href="#calculateTotalCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calculateTotalCart(cartId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="243"
+                            class="link-to-prism">src/carts/carts.service.ts:243</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cartId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkQuantityInCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>checkQuantityInCart</b></span>
+                        <a href="#checkQuantityInCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkQuantityInCart(cartId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="274"
+                            class="link-to-prism">src/carts/carts.service.ts:274</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cartId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteErrorMessage"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteErrorMessage</b></span>
+                        <a href="#deleteErrorMessage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteErrorMessage(cartId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="196"
+                            class="link-to-prism">src/carts/carts.service.ts:196</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cartId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteFromCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteFromCart</b></span>
+                        <a href="#deleteFromCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteFromCart(quantityIncartDATA)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="515"
+                            class="link-to-prism">src/carts/carts.service.ts:515</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>quantityIncartDATA</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteWholeCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteWholeCart</b></span>
+                        <a href="#deleteWholeCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteWholeCart(cartId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="697"
+                            class="link-to-prism">src/carts/carts.service.ts:697</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cartId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getCart</b></span>
+                        <a href="#getCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCart(cartId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="209"
+                            class="link-to-prism">src/carts/carts.service.ts:209</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cartId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="HandleLastDeliveryDate"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>HandleLastDeliveryDate</b></span>
+                        <a href="#HandleLastDeliveryDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>HandleLastDeliveryDate(CartDelivery, productDelivery)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="357"
+                            class="link-to-prism">src/carts/carts.service.ts:357</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CartDelivery</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>productDelivery</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="HandleQuantityShort"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>HandleQuantityShort</b></span>
+                        <a href="#HandleQuantityShort"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>HandleQuantityShort(data: <a href="../classes/QuantityShortDTO.html" target="_self">QuantityShortDTO</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/carts/carts.service.ts:121</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="../classes/QuantityShortDTO.html" target="_self" >QuantityShortDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>isCart</b></span>
+                        <a href="#isCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isCart(cartId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/carts/carts.service.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cartId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isProduct"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>isProduct</b></span>
+                        <a href="#isProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isProduct(productId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/carts/carts.service.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>productId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isProductOnCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>isProductOnCart</b></span>
+                        <a href="#isProductOnCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isProductOnCart(quantityIncartDATA: <a href="../classes/addProductDTO.html" target="_self">Partial&lt;addProductDTO&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/carts/carts.service.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>quantityIncartDATA</td>
+                                    <td>
+                                                <code><a href="../classes/addProductDTO.html" target="_self" >Partial&lt;addProductDTO&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="newCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>newCart</b></span>
+                        <a href="#newCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>newCart(createCartData)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="164"
+                            class="link-to-prism">src/carts/carts.service.ts:164</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>createCartData</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="QuantityInCartByProduct"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>QuantityInCartByProduct</b></span>
+                        <a href="#QuantityInCartByProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>QuantityInCartByProduct(quantityIncartDATA)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/carts/carts.service.ts:45</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>quantityIncartDATA</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sendErrorMessageOnCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>sendErrorMessageOnCart</b></span>
+                        <a href="#sendErrorMessageOnCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sendErrorMessageOnCart(json, cartId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/carts/carts.service.ts:85</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>json</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>cartId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateTotalCart"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>updateTotalCart</b></span>
+                        <a href="#updateTotalCart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateTotalCart(cartId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="255"
+                            class="link-to-prism">src/carts/carts.service.ts:255</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cartId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  BadRequestException,
+  ConsoleLogger,
+  Injectable,
+  NotFoundException,
+} from &#x27;@nestjs/common&#x27;
+import { Prisma, Size } from &#x27;@prisma/client&#x27;
+import { resolve } from &#x27;path&#x27;
+import { elementAt, identity } from &#x27;rxjs&#x27;
+
+import { PrismaService } from &#x27;src/prisma/prisma.service&#x27;
+import { ProductsService } from &#x27;src/products/products.service&#x27;
+
+import { CartDbData } from &#x27;./custonType/CartDB&#x27;
+import { addProductDTO } from &#x27;./dtos/addProduct.dto&#x27;
+import { AddToCartDTO } from &#x27;./dtos/add_to_cart.dto&#x27;
+import { QuantityShortDTO } from &#x27;./dtos/quantity_short.dto&#x27;
+import { Total_cartDTO } from &#x27;./dtos/total_cart.dto&#x27;
+@Injectable()
+export class CartsService {
+  constructor(
+    private prisma: PrismaService,
+    private productService: ProductsService
+  ) {}
+
+  async isCart(cartId: string) {
+    return await this.prisma.cart.findUnique({
+      where: { id: cartId },
+      include: {
+        products: {
+          include: {
+            product: {
+              select: {
+                quantity_available: true,
+                price: true,
+                DeliveryDate: true,
+              },
+            },
+          },
+        },
+      },
+    })
+  }
+
+  async QuantityInCartByProduct(quantityIncartDATA) {
+    let { productId, cartId, size } &#x3D; quantityIncartDATA
+
+    let ProductOnCartID &#x3D; await this.isProductOnCart(quantityIncartDATA)
+
+    return await this.prisma.cart.findFirst({
+      select: { products: { select: { quantityInCart: true } } },
+      where: {
+        AND: [
+          { id: cartId },
+          {
+            products: {
+              some: {
+                AND: [{ id: ProductOnCartID.id }, { size: { equals: size } }],
+              },
+            },
+          },
+        ],
+      },
+    })
+  }
+
+  async isProduct(productId) {
+    return await this.productService.isProduct(productId)
+  }
+
+  async isProductOnCart(quantityIncartDATA: Partial&lt;addProductDTO&gt;) {
+    let { productId, cartId, size } &#x3D; quantityIncartDATA
+
+    // Mainly to get back size and id from the intermediary Prisma table (ProductsOnCart)
+    const isProduct &#x3D; await this.prisma.productsOnCart.findFirst({
+      select: { id: true, size: true, quantityInCart: true },
+      where: {
+        AND: [{ cartId: cartId }, { productId: productId }, { size: size }],
+      },
+    })
+
+    return isProduct
+  }
+
+  async sendErrorMessageOnCart(json, cartId) {
+    const currentError &#x3D; await this.prisma.cart.findUnique({
+      select: { error_Messages: true },
+      where: { id: cartId },
+    })
+
+    if (currentError.error_Messages[0] &#x3D;&#x3D;&#x3D; &#x27;JsonNull&#x27;) {
+      let newJson &#x3D; json as Prisma.JsonArray
+      try {
+        await this.prisma.cart.update({
+          where: { id: cartId },
+          data: {
+            error_Messages: newJson,
+          },
+        })
+      } catch (error) {
+        return new Error(&#x27;Update error_Message failed&#x27;)
+      }
+    } else {
+      let newJson &#x3D; [
+        ...currentError.error_Messages,
+        ...json,
+      ] as Prisma.JsonArray
+      try {
+        await this.prisma.cart.update({
+          where: { id: cartId },
+          data: {
+            error_Messages: newJson,
+          },
+        })
+      } catch (error) {
+        return new Error(&#x27;Update error_Message failed&#x27;)
+      }
+    }
+  }
+
+  async HandleQuantityShort(data: QuantityShortDTO) {
+    let {
+      cartId,
+      isProductOnCartID,
+      quantityShort,
+      availableQuantity,
+      productId,
+    } &#x3D; data
+
+    // 1) Restrict quantity wanted only to quantity available
+
+    try {
+      let newCart &#x3D; await this.prisma.cart.update({
+        include: { products: true },
+        data: {
+          update_at: new Date(),
+          products: {
+            update: {
+              where: { id: isProductOnCartID },
+              data: { quantityInCart: { decrement: quantityShort } },
+            },
+          },
+        },
+        where: { id: cartId },
+      })
+
+      // 2) Recalculate the new price and update it
+
+      await this.updateTotalCart(newCart.id)
+    } catch (error) {
+      return new Error(&#x27;Update quantity on cart failed&#x27;)
+    }
+
+    // send error message to warn there is only n quantity available
+    var json &#x3D; [
+      {
+        error: &#x60;only ${availableQuantity} (left) for product ${productId}&#x60;,
+      },
+    ]
+
+    this.sendErrorMessageOnCart(json, cartId)
+  }
+
+  async newCart(createCartData) {
+    let { productId, size, quantity } &#x3D; createCartData
+
+    const isProduct &#x3D; await this.isProduct(productId)
+
+    if (!isProduct) {
+      throw new NotFoundException(&#x27;No product found&#x27;)
+    } else {
+      let newCart: CartDbData &#x3D; {
+        delivery_fees: 0,
+        delivery_date: isProduct.DeliveryDate,
+        total: 0,
+        status: &#x27;PENDING&#x27;,
+      }
+
+      let cartId &#x3D; await this.prisma.cart.create({
+        select: { id: true },
+        data: newCart,
+      })
+      let addproductData: addProductDTO &#x3D; {
+        productId: productId,
+        size: size,
+        quantityWanted: quantity,
+        cartId: cartId.id,
+      }
+
+      let addProduct &#x3D; await this.addProductToCart(addproductData)
+
+      return await this.isCart(addProduct.id)
+    }
+  }
+
+  async deleteErrorMessage(cartId) {
+    const isCart &#x3D; await this.isCart(cartId)
+    if (isCart) {
+      let deleteMessage &#x3D; await this.prisma.cart.update({
+        where: { id: cartId },
+        data: { error_Messages: Prisma.JsonNull },
+      })
+      return deleteMessage
+    } else {
+      return null
+    }
+  }
+
+  async getCart(cartId) {
+    let isCart &#x3D; await this.isCart(cartId)
+
+    if (!isCart) {
+      throw new BadRequestException(&#x27;No cart Found&#x27;)
+    } else {
+      // check quantity in cart to be sure there is enough available
+      await this.checkQuantityInCart(cartId)
+
+      // update price related to the new quantities :
+
+      await this.updateTotalCart(cartId)
+
+      const newCart &#x3D; await this.prisma.cart.findUnique({
+        where: { id: cartId },
+        include: {
+          products: {
+            include: {
+              product: {
+                select: {
+                  quantity_available: true,
+                  price: true,
+                  DeliveryDate: true,
+                },
+              },
+            },
+          },
+        },
+      })
+
+      return newCart
+    }
+  }
+
+  async calculateTotalCart(cartId) {
+    const cart &#x3D; await this.isCart(cartId)
+    let total &#x3D; 0
+    cart.products.map((products) &#x3D;&gt; {
+      console.log(&#x27;quantityinCart&#x27;, products.quantityInCart)
+      total &#x3D;
+        total + Number(products.product.price) * Number(products.quantityInCart)
+    })
+
+    return total
+  }
+
+  async updateTotalCart(cartId: string) {
+    // 2) Recalculate the new price and update it
+    let newTotal &#x3D; await this.calculateTotalCart(cartId)
+
+    try {
+      await this.prisma.cart.update({
+        include: { products: true },
+        data: {
+          update_at: new Date(),
+
+          total: newTotal,
+        },
+        where: { id: cartId },
+      })
+    } catch (error) {
+      console.log(&#x27;error update Total cart &#x27;, error)
+    }
+  }
+
+  async checkQuantityInCart(cartId) {
+    const isCart &#x3D; await this.isCart(cartId)
+
+    if (!isCart) {
+      throw new Error(&#x60;No Cart found for this Id: ${cartId}&#x60;)
+    } else {
+      let ps &#x3D; []
+
+      isCart.products.map(async (products) &#x3D;&gt; {
+        ps.push(
+          new Promise(async (resolve, reject) &#x3D;&gt; {
+            const availableQuantity &#x3D;
+              products.product.quantity_available[products.size]
+
+            const quantityInCartProduct &#x3D; products.quantityInCart
+
+            if (availableQuantity &lt; quantityInCartProduct) {
+              // Case 1:  available quantity went down to 0
+              if (availableQuantity &#x3D;&#x3D;&#x3D; 0) {
+                // 1) check total price
+                let total &#x3D;
+                  Number(isCart.total) - Number(products.product.price)
+
+                // 2) delete product
+                let quantityIncartDATA &#x3D; {
+                  productId: products.productId,
+                  cartId: cartId,
+                  size: products.size,
+                }
+                try {
+                  await this.deleteFromCart(quantityIncartDATA)
+                } catch (error) {
+                  reject(error)
+                }
+
+                // 3) send error message
+                var json &#x3D; [
+                  {
+                    error: &#x60;No quantity left for product ${products.productId}&#x60;,
+                  },
+                ]
+                try {
+                  await this.sendErrorMessageOnCart(json, cartId)
+                } catch (error) {
+                  console.log(error)
+                  reject(error)
+                }
+              } else {
+                //Case 2 : there is quantity but not enough for the wanted quantity
+
+                const quantityShort &#x3D;
+                  products.quantityInCart - availableQuantity
+
+                const isProductOnCartID &#x3D; products.id
+
+                let dataQuantityShort &#x3D; {
+                  cartId: cartId,
+                  isProductOnCartID: isProductOnCartID,
+                  productId: products.productId,
+                  availableQuantity: availableQuantity,
+                  quantityShort: quantityShort,
+                }
+
+                try {
+                  await this.HandleQuantityShort(dataQuantityShort)
+                } catch (error) {
+                  console.log(error)
+                  reject(error)
+                }
+              }
+              resolve(&#x27;quantity problems resolved&#x27;)
+            } else {
+              resolve(&#x27;quantity ok&#x27;)
+            }
+          })
+        )
+      })
+
+      await Promise.all(ps).then((values) &#x3D;&gt; {
+        console.log(values)
+      })
+    }
+  }
+  async HandleLastDeliveryDate(CartDelivery, productDelivery) {
+    let dateArray &#x3D; [CartDelivery, productDelivery]
+    return dateArray.sort(function (date1, date2) {
+      return date2.getTime() - date1.getTime()
+    })[0]
+  }
+
+  async addProductToCart(addProductData) {
+    const { size, cartId, productId } &#x3D; addProductData
+    const isCart &#x3D; await this.isCart(cartId)
+
+    // quantityWanted is optional, by default &#x3D;1
+    let quantityWanted &#x3D; 1
+
+    if (addProductData.quantityWanted) {
+      quantityWanted &#x3D; addProductData.quantityWanted
+    }
+
+    if (!isCart) {
+      throw new NotFoundException(&#x27;No cart Found&#x27;)
+    } else {
+      const isProduct &#x3D; await this.prisma.product.findUnique({
+        where: { id: productId },
+        include: { quantity_available: true },
+      })
+
+      if (!isProduct) {
+        throw new NotFoundException(&#x27;No product found&#x27;)
+      } else {
+        let quantity &#x3D; isProduct.quantity_available[size]
+
+        if (quantity &lt;&#x3D; 0) {
+          throw new NotFoundException(&#x27;Product not available&#x27;)
+        } else {
+          let total &#x3D;
+            Number(isCart.total) + quantityWanted * Number(isProduct.price)
+
+          // check if the product to add is already on the cart
+          // and if it is the same product size
+
+          let quantityIncartDATA &#x3D; {
+            productId: productId,
+            cartId: cartId,
+            size: size,
+          }
+
+          // check if there is no same product on cart /
+          const isProductOnCartID &#x3D; await this.isProductOnCart(
+            quantityIncartDATA
+          )
+
+          if (isProductOnCartID &amp;&amp; isProductOnCartID !&#x3D; null) {
+            let quantityInCart &#x3D; await this.QuantityInCartByProduct(
+              quantityIncartDATA
+            )
+
+            //check if there is enough quantity left
+            if (
+              Number(quantityWanted) + Number(quantityInCart) &lt;&#x3D;
+              Number(quantity)
+            ) {
+              if (isProductOnCartID &amp;&amp; isProductOnCartID.size &#x3D;&#x3D;&#x3D; size) {
+                //update quantity on cart by 1
+
+                let productUpdated &#x3D; await this.prisma.cart.update({
+                  include: { products: true },
+                  data: {
+                    update_at: new Date(),
+                    products: {
+                      update: {
+                        where: { id: isProductOnCartID.id },
+                        data: { quantityInCart: { increment: quantityWanted } },
+                      },
+                    },
+                    total: total,
+                  },
+                  where: { id: cartId },
+                })
+                return productUpdated
+              }
+            } else {
+              // if quantity available &lt; quantity wanted
+              const quantityShort &#x3D;
+                quantityWanted + Number(quantityInCart) - quantity
+              let dataQuantityShort &#x3D; {
+                cartId: cartId,
+                isProductOnCartID: isProductOnCartID.id,
+                productId: productId,
+                availableQuantity: quantity,
+                quantityShort: quantityShort,
+              }
+              try {
+                await this.HandleQuantityShort(dataQuantityShort)
+                return await this.isCart(cartId)
+              } catch (error) {
+                console.log(
+                  &#x27;error on add product Cart, handle quantity short&#x27;,
+                  error
+                )
+              }
+            }
+          } else {
+            // check if there is enough quantity available
+            if (quantityWanted &lt;&#x3D; quantity) {
+              let productUpdated &#x3D; await this.prisma.cart.update({
+                include: { products: true },
+                data: {
+                  update_at: new Date(),
+                  products: {
+                    create: [
+                      {
+                        product: { connect: { id: productId } },
+                        size: size,
+                        quantityInCart: quantityWanted,
+                      },
+                    ],
+                  },
+                  total: total,
+                },
+                where: { id: cartId },
+              })
+
+              return productUpdated
+            } else {
+              // if, not, put only quantity available, right price and send error message
+              let newTotal &#x3D; Number(quantity) * Number(isProduct.price)
+              let productUpdated &#x3D; await this.prisma.cart.update({
+                include: { products: true },
+                data: {
+                  update_at: new Date(),
+                  products: {
+                    create: [
+                      {
+                        product: { connect: { id: productId } },
+                        size: size,
+                        quantityInCart: quantity,
+                      },
+                    ],
+                  },
+                  total: newTotal,
+                },
+                where: { id: cartId },
+              })
+
+              let json &#x3D; [
+                {
+                  error: &#x60;only ${quantity} &quot;left&quot;for product ${productId}&#x60;,
+                },
+              ]
+              await this.sendErrorMessageOnCart(json, cartId)
+              return productUpdated
+            }
+          }
+        }
+      }
+    }
+  }
+
+  async deleteFromCart(quantityIncartDATA) {
+    const { cartId, quantity } &#x3D; quantityIncartDATA
+    const isProductOnCartID &#x3D; await this.isProductOnCart(quantityIncartDATA)
+
+    if (!isProductOnCartID) {
+      throw new NotFoundException(&#x27;No product OR Cart found&#x27;)
+    } else {
+      let quantityIncart &#x3D; isProductOnCartID.quantityInCart
+      if (quantity &#x3D;&#x3D;&#x3D; quantityIncart) {
+        let productDeleted &#x3D; await this.prisma.cart.update({
+          where: { id: cartId },
+          include: { products: true },
+          data: {
+            update_at: new Date(),
+            products: {
+              disconnect: [{ id: isProductOnCartID.id }],
+            },
+          },
+        })
+
+        // update Total price
+        await this.updateTotalCart(productDeleted.id)
+        return productDeleted
+      } else if (quantity &lt; quantityIncart) {
+        let productDeleted &#x3D; await this.prisma.cart.update({
+          where: { id: cartId },
+          include: { products: true },
+          data: {
+            update_at: new Date(),
+            products: {
+              update: {
+                where: { id: isProductOnCartID.id },
+                data: { quantityInCart: { decrement: quantity } },
+              },
+            },
+          },
+        })
+        // update Total price
+        await this.updateTotalCart(productDeleted.id)
+        return productDeleted
+      } else {
+        let productDeleted &#x3D; await this.prisma.cart.update({
+          where: { id: cartId },
+          include: { products: true },
+          data: {
+            update_at: new Date(),
+            products: {
+              update: {
+                where: { id: isProductOnCartID.id },
+                data: { quantityInCart: { decrement: quantityIncart } },
+              },
+            },
+          },
+        })
+        let json &#x3D; [
+          {
+            error: &#x60;only ${quantityIncart} for this product ${productDeleted.id} on you cart&#x60;,
+          },
+        ]
+        await this.sendErrorMessageOnCart(json, cartId)
+        // update Total price
+        await this.updateTotalCart(productDeleted.id)
+        return productDeleted
+      }
+    }
+  }
+
+  async addOwnerCart(user, cartId: string) {
+    console.log(&#x27;cart&#x27;, cartId)
+    let isCart &#x3D; await this.isCart(cartId)
+
+    if (!isCart) {
+      throw new Error(&#x27;no cart found&#x27;)
+    } else {
+      // check if the user have already a pending Cart
+
+      let oldUserCart &#x3D; await this.prisma.user.findFirst({
+        where: {
+          AND: [{ id: user.id }, { carts: { some: { status: &#x27;PENDING&#x27; } } }],
+        },
+        include: {
+          carts: {
+            where: { status: { equals: &#x27;PENDING&#x27; } },
+            include: {
+              products: {
+                include: { product: { select: { quantity_available: true } } },
+              },
+            },
+          },
+        },
+      })
+
+      if (!oldUserCart) {
+        // if not, add user as owner for the current cart and
+        //check if quantities are still available
+
+        await this.checkQuantityInCart(cartId)
+
+        let ownerCart &#x3D; await this.prisma.cart.update({
+          where: { id: cartId },
+          include: { owner: { select: { id: true, email: true } } },
+          data: {
+            owner: {
+              connect: { id: user.id },
+            },
+          },
+        })
+        return ownerCart
+      } else {
+        // Merge carts together (keep the oldest one )
+        let data: {}
+
+        data &#x3D; { ...data, update_at: new Date() }
+
+        if (isCart.error_Messages) {
+          try {
+            await this.sendErrorMessageOnCart(
+              isCart.error_Messages,
+              oldUserCart.carts[0].id
+            )
+          } catch (error) {
+            console.log(&#x27;add to cart message error merge&#x27;, error)
+          }
+        }
+
+        if (isCart.products) {
+          let ps &#x3D; []
+
+          isCart.products.map(async (products) &#x3D;&gt; {
+            ps.push(
+              new Promise(async (resolve, reject) &#x3D;&gt; {
+                let addProductData &#x3D; {
+                  productId: products.productId,
+                  cartId: oldUserCart.carts[0].id,
+                  size: products.size,
+                  quantityWanted: products.quantityInCart,
+                }
+                try {
+                  await this.addProductToCart(addProductData)
+                } catch (error) {
+                  console.log(&#x27;addToCart error&#x27;, error)
+                }
+
+                resolve(&#x27;product added to older Cart&#x27;)
+              })
+            )
+          })
+          await Promise.all(ps).then((values) &#x3D;&gt; {
+            console.log(values)
+          })
+        }
+        // total recalculate
+        try {
+          // const newTotal &#x3D; await this.calculateTotalCart(
+          //   oldUserCart.carts[0].id
+          // )
+
+          await this.updateTotalCart(oldUserCart.carts[0].id)
+        } catch (error) {
+          console.log(&#x27;error Cart OWNER recalculate price&#x27;, error)
+        }
+
+        // Suppress the other cart
+        await this.deleteWholeCart(cartId)
+        //check if quantities are still available
+
+        try {
+          await this.checkQuantityInCart(oldUserCart.carts[0].id)
+          return await this.isCart(oldUserCart.carts[0].id)
+        } catch (error) {
+          console.log(
+            &#x27;error from add Owner, merge two carts, check quantity or calculate price&#x27;,
+            error
+          )
+        }
+
+        //  oldUserCart.carts[0];
+        return isCart
+      }
+    }
+  }
+
+  async deleteWholeCart(cartId: string) {
+    const isCart &#x3D; this.isCart(cartId)
+    if (!isCart) {
+      return null
+    } else {
+      let deletedCart &#x3D; await this.prisma.cart.delete({
+        where: { id: cartId },
+      })
+    }
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'CartsService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

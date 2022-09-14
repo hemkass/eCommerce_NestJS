@@ -1,0 +1,278 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ecommerce documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">ecommerce documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1>E-Commerce Backend
+MIT License</h1>
+
+<h4 id="table-of-contents">Table of contents</h4>
+<ol>
+<li><a href="#description">Description</a></li>
+<li><a href="#built">Built With</a></li>
+<li><a href="#require">Installation Instructions and Requirement</a><ul>
+<li><a href="#node">Node.js Installation</a></li>
+<li><a href="#sql">SQL database</a></li>
+<li><a href="#clone">Clone the Code and install dependencies</a></li>
+<li><a href="#auth">Authentification</a></li>
+</ul>
+</li>
+<li><a href="#start">Before starting</a><ul>
+<li><a href="#compodocs">Compodocs</a></li>
+<li><a href="#swagger">Swagger</a></li>
+<li><a href="#channel">How does this API work ? </a><ul>
+<li><a href="#product">First product</a></li>
+<li><a href="#cart">First cart</a></li>
+<li><a href="#ddProduct">Add product(s)</a></li>
+<li><a href="#remove">First product(s)</a></li>
+<li><a href="#signup">Authentification</a></li>
+<li><a href="#delivery">Delivery</a></li>
+<li><a href="#payment">Payment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#contact">Stay In touch</a></li>
+</ol>
+<p><a name="description"></a></p>
+<h1 id="description">Description</h1>
+<p>
+This project creates the back-end code for an e-commerce site via NestJs Framework. This application uses Express.js API and Prisma  to interact with a PostgreSQL database. The API Routes are created using RESTful CRUD methods. Since there is no front-end code, the application was tested using Postman . This Application is documented by SWAGGER and COMPODOCS
+</p>
+
+<p><a name="built"></a></p>
+<h1 id="built-with">Built With</h1>
+<ul>
+<li>NestJs</li>
+<li>JavaScript</li>
+<li>Typescript</li>
+<li>PostgreSQL</li>
+<li>Postico</li>
+<li>Prisma</li>
+<li>Swagger</li>
+<li>CompoDocs</li>
+
+</ul>
+
+<p><a name="require"></a></p>
+<h1 id="installation-instructions-and-requirement">Installation Instructions and Requirement</h1>
+<ol>
+<li>
+
+<h2 id="nodejs-installation">Node.js Installation</h2>
+<p><a name="node"></a></p>
+<p>Please check that you have Node.js globally installed on your computer. 
+ If not, try reinstalling Node.js by following this link: https://nodejs.org/en/
+</p></li>
+<br />
+
+<li>
+
+<h2 id="sql-database">SQL database</h2>
+<p><a name="sql"></a></p>
+<p>
+
+<p>To run, this project require to install PostgreSQL. If you don&#39;t have installed it yet, please check on their website : <code><a href="https://www.postgresql.org/">https://www.postgresql.org/</a></code></p>
+<p>Don&#39;t forget to add your DataBase in your .env</p>
+</p></li>
+<br />
+
+<li>
+
+<h2 id="clone-the-code-and-install-dependencies">Clone the Code and install dependencies</h2>
+<p><a name="clone"></a></p>
+<p> The first thing to do is to open git bash command line, and then simply you can clone the project under any of your favorite places as the following:
+
+<blockquote>
+<p>git clone <a href="https://gitlab.com/marine-user-agency/clothes_ecommerce.git">https://gitlab.com/marine-user-agency/clothes_ecommerce.git</a></p></li></p>
+</blockquote>
+</p>
+
+</ol>
+<br />
+
+<h2 id="authentification">Authentification</h2>
+<p><a name="auth"></a></p>
+<p>Don&#39;t forget to add a secret Key fot JWT in your .env. You can choose any string you want.</p>
+<p>If you want to use Facebook and Google auth, you need to create one and add id-user and secret-key in your env file.</p>
+<p>More information: <a href="https://console.cloud.google.com/apis">https://console.cloud.google.com/apis</a> (for google) and <a href="https://developers.facebook.com/apps/">https://developers.facebook.com/apps/</a> (facebook)</p>
+<h1 id="before-starting">Before Starting</h1>
+<p><a name="start"></a></p>
+<p>Please to understand infrastructure, routes possibler, watch before :</p>
+
+<ol><li>
+
+<h2 id="compodocs">COMPODOCS</h2>
+<p><a name="compodocs"></a></p>
+<p>
+<underline>To run it :</underline>
+
+<div><pre class="line-numbers"><code class="language-bash">$ npx &#64;compodoc/compodoc -p tsconfig.json -s</code></pre></div><p>Open your browser and navigate to <a href="http://localhost:8080">http://localhost:8080</a></p>
+<p>if you have any trouble, please check nestJs documentation :
+<a href="https://docs.nestjs.com/recipes/documentation">https://docs.nestjs.com/recipes/documentation</a></p></p>
+</li>
+
+ <li>
+
+<h2 id="swagger">SWAGGER</h2>
+<p><a name="swagger"></a></p>
+<p>Open your browser and navigate to <a href="http://localhost:3000/api">http://localhost:3000/api</a></p>
+</p></li></ol>
+# Running the app
+
+<div><pre class="line-numbers"><code class="language-bash"># development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+
+# production mode
+$ npm run start:prod</code></pre></div><h2 id="how-does-this-api-work---api-channel-">How does this API work - API CHANNEL ?</h2>
+<p><a name="channel"></a></p>
+<ol><li>STEP 1 : Create your first product </li>
+
+<p><a name="product"></a></p>
+<div><pre class="line-numbers"><code class="language-bash">http://localhost:3000/products/create</code></pre></div><li>STEP 2 : Create your CART with your first product</li>
+
+<p><a name="cart"></a></p>
+<div><pre class="line-numbers"><code class="language-bash">http://localhost:3000/carts/add/cart/:productId</code></pre></div><li>STEP 3 : Add product from your cart</li>
+<a name="addProduct"></a>
+```bash
+http://localhost:3000/add/product/:productId/:cartId
+```
+
+<li>STEP 3 bis : Remove product from your cart also </li>
+<a name="remove"></a>
+```bash
+http://localhost:3000/remove/product/:productId/:cartId
+```
+
+<li>STEP 4: Auth </li>
+<a name="signup"></a>
+To go further, you need to be logged in :
+
+<p>signUp:</p>
+<div><pre class="line-numbers"><code class="language-bash">http://localhost:3000/users/signup</code></pre></div><p>Basic Auth :</p>
+<div><pre class="line-numbers"><code class="language-bash">http://localhost:3000/login</code></pre></div><p>Google Auth :</p>
+<div><pre class="line-numbers"><code class="language-bash">http://localhost:3000/login/google</code></pre></div><li>STEP 5: Add delivery</li>
+
+<p><a name="delivery"></a></p>
+<p>To add delivery, you need first to be logged in and have registered a delivery adress</p>
+<div><pre class="line-numbers"><code class="language-bash">http://localhost:3000/delivery/create/:cartId</code></pre></div><li>STEP 6: Add paiement</li>
+
+<p><a name="payment"></a></p>
+<div><pre class="line-numbers"><code class="language-bash">http://localhost:3000/payments/create</code></pre></div><h1 id="stay-in-touch">Stay in touch</h1>
+<p><a name="contact"></a></p>
+<ul>
+<li>Author - <a href="https://fr.linkedin.com/in/marinecorbel">Marine Corbel</a></li>
+<li>Structure - <a href="https://user-agency.com/">USER</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

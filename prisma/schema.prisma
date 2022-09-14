@@ -1,0 +1,291 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               String          @id @default(uuid())
+  email            String          @unique
+  password         String?
+  adress_Delivery  AdressDelivery? @relation(fields: [deliveryId], references: [deliveryId], onDelete: Cascade, onUpdate: Cascade)
+  deliveryId       Int?
+  adress_Bill      AdressBill?
+  morphology       Morphology?
+  size             String?
+  weight           String?
+  reviews          Review[]
+  products         ownerProduct[]
+  carts            Cart[]
+  payments         Payment[]
+  admin            Boolean?
+  token            String?
+  firstname        String
+  lastname         String
+  stripeCustomerID String?
+  deliveries       Delivery[]
+  role             Role?
+
+}
+
+enum Role {
+  ADMIN
+  PAYMENT
+  LOGISTIQUE
+}
+
+// explicit many-to-many relation,  relation table between User and Product
+model ownerProduct {
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userId     String
+  product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  productId  String
+  assignedAt DateTime @default(now())
+  assignedBy String
+
+  @@id([userId, productId])
+}
+
+model AdressDelivery {
+  deliveryId Int     @id @default(autoincrement())
+  number     Int?
+  street     String?
+  postcode   Int
+  city       String
+  country    String
+
+
+  User User[]
+}
+
+model AdressBill {
+  adressBillId Int     @id @default(autoincrement())
+  number       Int?
+  street       String?
+  postcode     Int
+  city         String
+  country      String
+  user         User    @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userId       String  @unique
+}
+
+enum Morphology {
+  A
+  V
+  X
+  H
+  O
+}
+
+enum Style {
+  Casual
+  Sexy
+  Chic
+  Street
+  BCBG
+  Sport
+  Vintage
+}
+
+enum Brand {
+  DAZY
+  FENDI
+  ARMANI
+  BURBERRY
+  CHANEL
+  MCQ
+  VERSACE
+  DG
+}
+
+model Product {
+  id                 String            @id @default(uuid())
+  categories         Categories[]
+  ref                String
+  title              String            @db.Char(50)
+  description        String            @db.Char(300)
+  brand              Brand?
+  style              Style?
+  sustainable        Sustainable?
+  DeliveryDate       DateTime?
+  price              Int               @default(0)
+  color              String[]
+  size               String[]
+  quantity_available ProductQuantity?
+  quantity_cart      Int               @default(0)
+  created_at         DateTime          @default(now())
+  update_at          DateTime?         @default(now())
+  pictures           ProductPictures[]
+  favorite           Boolean           @default(false)
+  owner              ownerProduct[]
+  carts              ProductsOnCart[]
+  reviews            Review[]
+  rating_avg         String?           @default("0.00")
+}
+
+model ProductQuantity {
+  QuantityID        Int      @id @default(autoincrement())
+  ProductQuantity   Product? @relation(fields: [ProductQuantityId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  ProductQuantityId String?  @unique
+
+  XXS  Int? @default(0)
+  XS   Int? @default(0)
+  S    Int? @default(0)
+  M    Int? @default(0)
+  L    Int? @default(0)
+  XL   Int? @default(0)
+  XXL  Int? @default(0)
+  XXXL Int? @default(0)
+}
+
+// explicit many-to-many relation,  relation table between  Product and Cart
+
+enum Size {
+  XXS
+  XS
+  S
+  M
+  L
+  XL
+  XXL
+  XXXL
+}
+
+enum Category {
+  Clothes
+  Women
+  Men
+}
+
+enum Categories {
+  Vetements
+  TeeShirt
+  Femme
+  Homme
+  Enfant
+}
+
+model Sustainable {
+  id                  Int      @id @default(autoincrement())
+  product_sustainable Product? @relation(fields: [sustainableId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  sustainableId       String?  @unique
+
+  isActive    Boolean
+  description String? @db.Char(300)
+}
+
+model ProductPictures {
+  id                Int         @id @default(autoincrement())
+  src               String
+  created_at        DateTime?   @default(now())
+  update_at         DateTime?
+  productPictures   Product     @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  productId         String
+  stylePicture      String
+  morphoPicture     Morphology?
+  genderPicture     String?
+  categoriesPicture String?
+  colorPicture      String?
+  sizePicture       Size?
+}
+
+model Review {
+  id             String           @id @default(uuid())
+  created_at     DateTime         @default(now())
+  update_at      DateTime?
+  pictures       ReviewPictures[]
+  title          String           @db.Char(50)
+  description    String           @db.Char(300)
+  useful         Boolean          @default(false)
+  rating_avg     Int              @default(0)
+  rating_quality Int              @default(0)
+  rating_style   Int              @default(0)
+  rating_size    Int              @default(0)
+  owner          User?            @relation(fields: [ownerId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  ownerId        String?
+  products       Product?         @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  productId      String?
+}
+
+model ReviewPictures {
+  id             String    @id @default(uuid())
+  created_at     DateTime  @default(now())
+  update_at      DateTime?
+  src            String
+  reviewPictures Review    @relation(fields: [ReviewId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  ReviewId       String
+}
+
+model Cart {
+  id             String           @id @default(uuid())
+  created_at     DateTime         @default(now())
+  update_at      DateTime?
+  status         StatusCart
+  delivery_fees  Int              @default(0)
+  total          Int              @default(0)
+  delivery_date  DateTime?
+  owner          User?            @relation(fields: [ownerId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  ownerId        String?
+  products       ProductsOnCart[]
+  payment        Payment?
+  Delivery       Delivery[]
+  error_Messages Json[]
+}
+
+model ProductsOnCart {
+  id             Int       @id @default(autoincrement())
+  cart           Cart?     @relation(fields: [cartId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  cartId         String?
+  product        Product?  @relation(fields: [productId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  productId      String?
+  assignedAt     DateTime? @default(now())
+  size           String?
+  quantityInCart Int       @default(1)
+
+}
+
+enum StatusCart {
+  PENDING
+  ABANDONED
+  PAID
+}
+
+model Payment {
+  id                String    @id @default(uuid())
+  created_at        DateTime  @default(now())
+  update_at         DateTime?
+  owner             User      @relation(fields: [ownerId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  ownerId           String    @unique
+  affiliateCart     Cart      @relation(fields: [cartId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  cartId            String    @unique
+  affiliateDelivery Delivery  @relation(fields: [deliveryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  deliveryId        String    @unique
+
+}
+
+enum Delivery_type {
+  CollectInStore
+  HomeDelivery
+  FastDelivery
+}
+
+model Delivery {
+  id                   String        @id @default(uuid())
+  free_delivery_amount Int?
+  delivery_type        Delivery_type
+  delivery_fees        Int           @default(0)
+  delivery_date        DateTime
+  affiliateCart        Cart          @relation(fields: [cartId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  affiliateUser        User          @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  userId               String        @unique
+  cartId               String        @unique
+  payment              Payment?
+  update_at            DateTime?
+  total                Int           @default(0)
+}

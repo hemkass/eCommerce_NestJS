@@ -1,0 +1,38 @@
+### Create Product
+POST http://localhost:3000/products
+content-type: application/json
+
+{
+   "title": "t-shirt with crew neck in organic cotton blend",
+      "ref": "ref",
+      "color": "color",
+      "description": "description",
+      "brand": "brand",
+      "DeliveryDate":  "August 19, 2022 23:15:30 GMT+11:00",
+      "categories": ["vêtements","femme","tee-shirt"],
+      "price": 14,
+      "size": ["S","M","L"],
+      "quantity_available": 
+      {"XXS":0, 
+"XS":3,
+"S":2 ,
+"M":4,
+"L":2,
+"XL":1 ,
+"XXL":0,
+"XXXL":0},
+"pictures": [{
+"src":"https://res.cloudinary.com/dyj84szrx/image/upload/v1655884761/teeshirt/girl-926199_1920_aeityg.jpg" ,
+"stylePicture": ,
+"morphoPicture":  "A",
+"genderPicture ":"femme",
+"categoriesPicture": ,
+"sizePicture":"S"},
+{
+"src":"https://res.cloudinary.com/dyj84szrx/image/upload/v1655884761/teeshirt/apparel-162192_1280_k0nq7t.png" ,
+"stylePicture": "chill",
+"morphoPicture":  "V",
+"genderPicture ":"femme",
+"categoriesPicture":"vêtements" ,
+"sizePicture":"M"}],
+}

@@ -1,0 +1,841 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ecommerce documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ecommerce documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content controller">
+                   <div class="content-data">
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Controllers</li>
+  <li >ProductsController</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/products/products.controller.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Prefix</h3>
+            </p>
+            <p class="comment">
+                <code>products</code>
+            </p>
+
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#createProduct" >createProduct</a>
+                            </li>
+                            <li>
+                                <a href="#deleteManyProducts" >deleteManyProducts</a>
+                            </li>
+                            <li>
+                                <a href="#deleteProduct" >deleteProduct</a>
+                            </li>
+                            <li>
+                                <a href="#getAllProductsByCategory" >getAllProductsByCategory</a>
+                            </li>
+                            <li>
+                                <a href="#getProductById" >getProductById</a>
+                            </li>
+                            <li>
+                                <a href="#updateProduct" >updateProduct</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createProduct"></a>
+                    <span class="name">
+                        <span ><b>createProduct</b></span>
+                        <a href="#createProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createProduct(createProductData: <a href="../classes/CreateProductDto.html" target="_self">CreateProductDto</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ApiBody({type: CreateProductDto, description: &#x27;don&#x27;t forget to add categories, according your path, example possible :&#x27;, examples: undefined})<br />@Post(&#x27;/create&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/products/products.controller.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>createProductData</td>
+                                    <td>
+                                                <code><a href="../classes/CreateProductDto.html" target="_self" >CreateProductDto</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteManyProducts"></a>
+                    <span class="name">
+                        <span ><b>deleteManyProducts</b></span>
+                        <a href="#deleteManyProducts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteManyProducts(body: <a href="../classes/FindManyIdsDTO.html" target="_self">FindManyIdsDTO</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ApiBody({type: FindManyIdsDTO, description: &#x27;Delete many product by once, with array of productIDs&#x27;, examples: undefined})<br />@Post(&#x27;deletemany&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="156"
+                            class="link-to-prism">src/products/products.controller.ts:156</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body</td>
+                                    <td>
+                                                <code><a href="../classes/FindManyIdsDTO.html" target="_self" >FindManyIdsDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteProduct"></a>
+                    <span class="name">
+                        <span ><b>deleteProduct</b></span>
+                        <a href="#deleteProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteProduct(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Delete(&#x27;/:id&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="137"
+                            class="link-to-prism">src/products/products.controller.ts:137</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllProductsByCategory"></a>
+                    <span class="name">
+                        <span ><b>getAllProductsByCategory</b></span>
+                        <a href="#getAllProductsByCategory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllProductsByCategory(categories: string[], filters: <a href="../classes/filtersProductsDTO.html" target="_self">filtersProductsDTO</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ApiBody({type: undefined, description: &#x27;Categories of product needed,you can add your path&#x27;, examples: undefined})<br />@ApiQuery({name: &#x27;Date&#x27;, type: &#x27;string&#x27;, enum: Sort, required: false})<br />@Post(&#x27;/allProductsByCategory&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">src/products/products.controller.ts:95</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>categories</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>filters</td>
+                                    <td>
+                                                <code><a href="../classes/filtersProductsDTO.html" target="_self" >filtersProductsDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProductById"></a>
+                    <span class="name">
+                        <span ><b>getProductById</b></span>
+                        <a href="#getProductById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getProductById(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;/:id&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/products/products.controller.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateProduct"></a>
+                    <span class="name">
+                        <span ><b>updateProduct</b></span>
+                        <a href="#updateProduct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateProduct(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, toUpdate: <a href="../classes/CreateProductDto.html" target="_self">Partial&lt;CreateProductDto&gt;</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ApiBody({type: CreateProductDto, description: &#x27;send only field to update, for now pictures, color and categories can&#x27;t be updated&#x27;, examples: undefined})<br />@Patch(&#x27;/:id&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="129"
+                            class="link-to-prism">src/products/products.controller.ts:129</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>toUpdate</td>
+                                    <td>
+                                                <code><a href="../classes/CreateProductDto.html" target="_self" >Partial&lt;CreateProductDto&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Body,
+  Controller,
+  Post,
+  Get,
+  Query,
+  Patch,
+  Param,
+  Delete,
+} from &#x27;@nestjs/common&#x27;;
+import { CreateProductDto } from &#x27;./dtos/create-product.dto&#x27;;
+import { ProductsService } from &#x27;./products.service&#x27;;
+import { Response } from &#x27;express&#x27;;
+import { Product } from &#x27;@prisma/client&#x27;;
+import { FindManyIdsDTO } from &#x27;./dtos/find-many.dto&#x27;;
+import { ApiBody, ApiQuery, ApiTags } from &#x27;@nestjs/swagger&#x27;;
+import { filtersProductsDTO } from &#x27;./dtos/filters.dto&#x27;;
+import { Sort } from &#x27;src/payments/dtos/payment.dto&#x27;;
+
+@ApiTags(&#x27;products&#x27;)
+@Controller(&#x27;products&#x27;)
+export class ProductsController {
+  constructor(private productService: ProductsService) {}
+
+  @ApiBody({
+    type: CreateProductDto,
+    description:
+      &quot;don&#x27;t forget to add categories, according your path, example possible :&quot;,
+    examples: {
+      categories: {
+        summary: &#x27;[vêtement,femmes,teeshirt]&#x27;,
+        value: {
+          title: &#x27;T-shirt col tunisien manches courtes &#x27;,
+          sustainable: {
+            isActive: true,
+            description:
+              &#x27;Choisir un produit labellisé « STANDARD 100 by OEKO-TEX®» (appellation assez technique, on vous l’accorde), c’est choisir un textile inoffensif et non irritant pour la peau. Un label indépendant et international de référence qui protège la santé des consommateurs. Sain et responsable à la fois.&#x27;,
+          },
+          ref: &#x27;3743981 / GJY899&#x27;,
+          color: [&#x27;white&#x27;, &#x27;black&#x27;, &#x27;red&#x27;],
+          description:
+            &quot;Le T-shirt bi-matière, très féminin avec son empiècement en dentelle. C&#x27;est un COUP DE CŒUR de nos clientes. Encolure tunisienne avec patte de boutonnage. &quot;,
+          brand: &#x27;La redoute&#x27;,
+          DeliveryDate: &#x27;August 1, 2022 23:15:30 GMT+11:00&#x27;,
+          categories: [&#x27;vêtements&#x27;, &#x27;femme&#x27;, &#x27;tee-shirt&#x27;],
+          price: 12,
+          size: [&#x27;S&#x27;, &#x27;M&#x27;, &#x27;L&#x27;],
+          quantity_available: {
+            XXS: 1,
+            XS: 3,
+            S: 2,
+            M: 4,
+            L: 5,
+            XL: 1,
+            XXL: 6,
+            XXXL: 7,
+          },
+          pictures: [
+            {
+              src: &#x27;https://res.cloudinary.com/dyj84szrx/image/upload/v1655884761/teeshirt/girl-926199_1920_aeityg.jpg&#x27;,
+              stylePicture: &#x27;chill&#x27;,
+              morphoPicture: &#x27;A&#x27;,
+              sizePicture: &#x27;S&#x27;,
+            },
+            {
+              src: &#x27;https://res.cloudinary.com/dyj84szrx/image/upload/v1655884761/teeshirt/apparel-162192_1280_k0nq7t.png&#x27;,
+              stylePicture: &#x27;chill&#x27;,
+              morphoPicture: &#x27;V&#x27;,
+              categoriesPicture: &#x27;vêtements&#x27;,
+              sizePicture: &#x27;M&#x27;,
+            },
+          ],
+        },
+      },
+    },
+  })
+  @Post(&#x27;/create&#x27;)
+  createProduct(@Body() createProductData: CreateProductDto) {
+    return this.productService.createProduct(createProductData);
+  }
+
+  @ApiBody({
+    type: [String],
+    description: &#x27;Categories of product needed,you can add your path&#x27;,
+    examples: {
+      categories: {
+        value: {
+          categories: [&#x27;vêtements&#x27;, &#x27;femme&#x27;, &#x27;tee-shirt&#x27;],
+        },
+      },
+    },
+  })
+  @ApiQuery({ name: &#x27;Date&#x27;, type: &#x27;string&#x27;, enum: Sort, required: false })
+  @Post(&#x27;/allProductsByCategory&#x27;)
+  getAllProductsByCategory(
+    @Body() categories: string[],
+    @Query() filters: filtersProductsDTO,
+  ) {
+    let datas &#x3D; { categories, filters };
+
+    return this.productService.getproducts(datas);
+  }
+
+  @Get(&#x27;/:id&#x27;)
+  getProductById(@Param(&#x27;id&#x27;) id: string) {
+    return this.productService.isProduct(id);
+  }
+
+  @ApiBody({
+    type: CreateProductDto,
+    description:
+      &quot;send only field to update, for now pictures, color and categories can&#x27;t be updated&quot;,
+    examples: {
+      quantityavailable: {
+        value: {
+          quantity_available: {
+            XXS: 20,
+          },
+        },
+      },
+      sustainable: {
+        value: {
+          sustainable: true,
+        },
+      },
+    },
+  })
+  @Patch(&#x27;/:id&#x27;)
+  updateProduct(
+    @Param(&#x27;id&#x27;) id: string,
+    @Body() toUpdate: Partial&lt;CreateProductDto&gt;,
+  ) {
+    return this.productService.updateProducts(id, toUpdate);
+  }
+
+  @Delete(&#x27;/:id&#x27;)
+  deleteProduct(@Param(&#x27;id&#x27;) id: string) {
+    return this.productService.deleteProduct(id);
+  }
+
+  @ApiBody({
+    type: FindManyIdsDTO,
+    description: &#x27;Delete many product by once, with array of productIDs&#x27;,
+    examples: {
+      ProductIdsArray: {
+        value: {
+          ids: [
+            &#x27;31c9ed5e-4849-4370-9843-de5251359fab&#x27;,
+            &#x27;ec384093-68b6-4bf9-87b4-09976fc1d5e4&#x27;,
+          ],
+        },
+      },
+    },
+  })
+  @Post(&#x27;deletemany&#x27;)
+  deleteManyProducts(@Body() body: FindManyIdsDTO) {
+    return this.productService.deleteManyProducts(body);
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'controller';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductsController.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

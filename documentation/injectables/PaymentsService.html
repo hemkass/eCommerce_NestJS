@@ -1,0 +1,962 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ecommerce documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ecommerce documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >PaymentsService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/payments/payments.service.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#createPayment" >createPayment</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getAllPayments" >getAllPayments</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getPaymentByUserEmail" >getPaymentByUserEmail</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getPaymentByUserID" >getPaymentByUserID</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getPayments" >getPayments</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#isPayment" >isPayment</a>
+                            </li>
+                            <li>
+                                <a href="#queryFilter" >queryFilter</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(prisma: <a href="../injectables/PrismaService.html" target="_self">PrismaService</a>, cartService: <a href="../injectables/CartsService.html" target="_self">CartsService</a>, deliveryService: <a href="../injectables/DeliveryService.html" target="_self">DeliveryService</a>, userService: <a href="../injectables/UsersService.html" target="_self">UsersService</a>, stripe: <a href="../injectables/StripeService.html" target="_self">StripeService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/payments/payments.service.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>prisma</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PrismaService.html" target="_self" >PrismaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cartService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartsService.html" target="_self" >CartsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>deliveryService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DeliveryService.html" target="_self" >DeliveryService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsersService.html" target="_self" >UsersService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>stripe</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StripeService.html" target="_self" >StripeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createPayment"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>createPayment</b></span>
+                        <a href="#createPayment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createPayment(datas)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/payments/payments.service.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>datas</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllPayments"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getAllPayments</b></span>
+                        <a href="#getAllPayments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAllPayments(datas: <a href="../classes/PaymentDTO.html" target="_self">Partial&lt;PaymentDTO&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/payments/payments.service.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>datas</td>
+                                    <td>
+                                                <code><a href="../classes/PaymentDTO.html" target="_self" >Partial&lt;PaymentDTO&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPaymentByUserEmail"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getPaymentByUserEmail</b></span>
+                        <a href="#getPaymentByUserEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPaymentByUserEmail(datas)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="152"
+                            class="link-to-prism">src/payments/payments.service.ts:152</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>datas</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPaymentByUserID"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getPaymentByUserID</b></span>
+                        <a href="#getPaymentByUserID"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPaymentByUserID(datas)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="164"
+                            class="link-to-prism">src/payments/payments.service.ts:164</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>datas</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPayments"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getPayments</b></span>
+                        <a href="#getPayments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPayments(user, filters)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">src/payments/payments.service.ts:128</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>filters</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isPayment"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>isPayment</b></span>
+                        <a href="#isPayment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isPayment(paymentId)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/payments/payments.service.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>paymentId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="queryFilter"></a>
+                    <span class="name">
+                        <span ><b>queryFilter</b></span>
+                        <a href="#queryFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>queryFilter(datas: <a href="../classes/PaymentDTO.html" target="_self">Partial&lt;PaymentDTO&gt;</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/payments/payments.service.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>datas</td>
+                                    <td>
+                                                <code><a href="../classes/PaymentDTO.html" target="_self" >Partial&lt;PaymentDTO&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Body,
+  ForbiddenException,
+  Injectable,
+  NotFoundException,
+  UnauthorizedException,
+} from &#x27;@nestjs/common&#x27;
+import { NotFoundError } from &#x27;rxjs&#x27;
+import { CartsService } from &#x27;src/carts/carts.service&#x27;
+import { PrismaService } from &#x27;src/prisma/prisma.service&#x27;
+import { ProductsService } from &#x27;src/products/products.service&#x27;
+import { UsersService } from &#x27;src/users/users.service&#x27;
+import { newPaymentDTO } from &#x27;./dtos/create_payment.dto&#x27;
+import { PaymentsFilters } from &#x27;./customTypes/all_payments&#x27;
+import { PaymentDTO } from &#x27;./dtos/payment.dto&#x27;
+import { DeliveryService } from &#x27;src/delivery/delivery.service&#x27;
+import { StripeService } from &#x27;src/stripe/stripe.service&#x27;
+
+@Injectable()
+export class PaymentsService {
+  constructor(
+    private prisma: PrismaService,
+    private cartService: CartsService,
+    private deliveryService: DeliveryService,
+    private userService: UsersService,
+    private stripe: StripeService
+  ) {}
+
+  async createPayment(datas) {
+    let { paymentMethodId, cart } &#x3D; datas
+    // check if, quantity in cart are still availables
+    await this.cartService.checkQuantityInCart(cart.id)
+
+    //check if there is a free delivery
+    const isAffiliatedDelivery &#x3D; await this.deliveryService.isDelivery(cart.id)
+    if (
+      !isAffiliatedDelivery ||
+      !isAffiliatedDelivery.affiliateUser?.stripeCustomerID
+    ) {
+      throw new ForbiddenException(
+        &#x27;Need affiliated delivery, please create delivery First &#x27;
+      )
+    } else {
+      // send payment to stripe
+      let data &#x3D; {
+        paymentMethod: paymentMethodId,
+        amount: isAffiliatedDelivery.total,
+        customerId: isAffiliatedDelivery.affiliateUser.stripeCustomerID,
+      }
+
+      let stripe &#x3D; await this.stripe.charge(data)
+      // create payment in Bdd
+      // if there is no bill adress, by default use delivery adress
+
+      const newPayment &#x3D; await this.prisma.payment.create({
+        data: {
+          owner: { connect: { id: isAffiliatedDelivery.affiliateUser.id } },
+          affiliateCart: { connect: { id: cart.id } },
+          affiliateDelivery: { connect: { id: isAffiliatedDelivery.id } },
+        },
+      })
+
+      let cartStatus &#x3D; await this.prisma.cart.update({
+        where: { id: cart.id },
+        data: { status: &#x27;PAID&#x27; },
+      })
+    }
+  }
+
+  queryFilter(datas: Partial&lt;PaymentDTO&gt;) {
+    let orderBy &#x3D; {}
+    orderBy &#x3D; { created_at: &#x60;asc&#x60; }
+    if (datas.sort) {
+      if (datas.sort &#x3D;&#x3D;&#x3D; &#x27;desc&#x27;) {
+        orderBy &#x3D; { created_at: &#x60;desc&#x60; }
+      }
+    }
+
+    if (datas.total) {
+      if (datas.sort &#x3D;&#x3D;&#x3D; &#x27;desc&#x27;) {
+        orderBy &#x3D; { AffiliateCart: { total: &#x27;desc&#x27; } }
+      } else {
+        orderBy &#x3D; { AffiliateCart: { total: &#x27;asc&#x27; } }
+      }
+    }
+
+    return orderBy
+  }
+
+  async getAllPayments(datas: Partial&lt;PaymentDTO&gt;) {
+    let filters &#x3D; {}
+
+    // sort by date or by total
+    let orderBy &#x3D; await this.queryFilter(datas)
+
+    let payments &#x3D; await this.prisma.payment.findMany({
+      include: {
+        owner: {
+          select: {
+            id: true,
+            email: true,
+            lastname: true,
+            adress_Bill: true,
+            adress_Delivery: true,
+          },
+        },
+        affiliateCart: { include: { products: true } },
+      },
+      orderBy: orderBy,
+    })
+    return payments
+  }
+  async isPayment(paymentId) {
+    let payment &#x3D; await this.prisma.payment.findUnique({
+      where: { id: paymentId },
+      include: {
+        owner: { select: { id: true, email: true } },
+        affiliateCart: { include: { products: true } },
+      },
+    })
+    if (payment) {
+      return payment
+    } else {
+      throw new NotFoundException(&#x60;No payment found for ${paymentId}&#x60;)
+    }
+  }
+
+  async getPayments(user, filters) {
+    let orderBy &#x3D; await this.queryFilter(filters)
+
+    let payment &#x3D; await this.prisma.payment.findMany({
+      where: { ownerId: user.id },
+      include: {
+        owner: {
+          select: {
+            id: true,
+            email: true,
+            lastname: true,
+            adress_Bill: true,
+            adress_Delivery: true,
+          },
+        },
+        affiliateCart: { include: { products: true } },
+      },
+      orderBy: orderBy,
+    })
+    return payment
+  }
+
+  // Route for admin only
+
+  async getPaymentByUserEmail(datas) {
+    let { email, filters } &#x3D; datas
+
+    let isUser &#x3D; await this.userService.isUserByEmail(email)
+
+    if (!isUser) {
+      throw new NotFoundException(&#x60;No user found for ${email}&#x60;)
+    } else {
+      return await this.getPayments(isUser, filters)
+    }
+  }
+
+  async getPaymentByUserID(datas) {
+    let { id, filters } &#x3D; datas
+
+    let isUser &#x3D; await this.userService.isUserById(id)
+
+    if (!isUser) {
+      throw new NotFoundException(&#x60;No user found for ${id}&#x60;)
+    } else {
+      return await this.getPayments(isUser, filters)
+    }
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'PaymentsService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

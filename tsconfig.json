@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": false,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noEmit": false,
+    "noFallthroughCasesInSwitch": false
+  },
+  "exclude": ["node_modules", "test", "dist", "**/*spec.ts", "**/*test.ts"],
+  "paths": {
+    "@resources/*": ["src/resources/*"],
+    "@resources": ["src/resources"],
+    "@shared/*": ["src/shared/*"],
+    "@shared": ["src/shared"],
+    "@email/*": ["src/email/*"],
+    "@email": ["src/email"]
+  }
+}
